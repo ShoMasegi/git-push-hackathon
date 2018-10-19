@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		365EE0FB2179D87400EE1AC9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 365EE0FA2179D87400EE1AC9 /* AppDelegate.swift */; };
 		365EE0FD2179D87400EE1AC9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 365EE0FC2179D87400EE1AC9 /* ViewController.swift */; };
-		365EE1002179D87400EE1AC9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 365EE0FE2179D87400EE1AC9 /* Main.storyboard */; };
 		365EE1022179D87600EE1AC9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 365EE1012179D87600EE1AC9 /* Assets.xcassets */; };
 		365EE1052179D87600EE1AC9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 365EE1032179D87600EE1AC9 /* LaunchScreen.storyboard */; };
 		365EE1132179DCDE00EE1AC9 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 365EE10F2179DCB600EE1AC9 /* RxCocoa.framework */; };
@@ -28,6 +27,12 @@
 		365EE1602179EA4D00EE1AC9 /* SVProgressHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 365EE1592179EA4D00EE1AC9 /* SVProgressHUD.framework */; };
 		365EE1612179EA4D00EE1AC9 /* ReactiveMoya.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 365EE15A2179EA4D00EE1AC9 /* ReactiveMoya.framework */; };
 		365EE1622179EA4D00EE1AC9 /* Moya.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 365EE15B2179EA4D00EE1AC9 /* Moya.framework */; };
+		365EE1642179F08100EE1AC9 /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = 365EE1632179F08100EE1AC9 /* Application.swift */; };
+		365EE1662179F0A100EE1AC9 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 365EE1652179F0A100EE1AC9 /* RootViewController.swift */; };
+		365EE16A2179F28F00EE1AC9 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 365EE1692179F28F00EE1AC9 /* SplashViewController.swift */; };
+		365EE16C2179F8B700EE1AC9 /* LockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 365EE16B2179F8B700EE1AC9 /* LockViewController.swift */; };
+		365EE16E2179FB0A00EE1AC9 /* FadeTransitionable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 365EE16D2179FB0A00EE1AC9 /* FadeTransitionable.swift */; };
+		365EE1702179FD6600EE1AC9 /* MainNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 365EE16F2179FD6600EE1AC9 /* MainNavigator.swift */; };
 		561B72412ADB3DE96EF3278E /* Pods_Gist.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 825030BD0FEAD48E3CF2EA40 /* Pods_Gist.framework */; };
 /* End PBXBuildFile section */
 
@@ -68,7 +73,6 @@
 		365EE0F72179D87400EE1AC9 /* Gist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gist.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		365EE0FA2179D87400EE1AC9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		365EE0FC2179D87400EE1AC9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		365EE0FF2179D87400EE1AC9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		365EE1012179D87600EE1AC9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		365EE1042179D87600EE1AC9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		365EE1062179D87600EE1AC9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -89,6 +93,12 @@
 		365EE1592179EA4D00EE1AC9 /* SVProgressHUD.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SVProgressHUD.framework; path = Carthage/Build/iOS/SVProgressHUD.framework; sourceTree = "<group>"; };
 		365EE15A2179EA4D00EE1AC9 /* ReactiveMoya.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveMoya.framework; path = Carthage/Build/iOS/ReactiveMoya.framework; sourceTree = "<group>"; };
 		365EE15B2179EA4D00EE1AC9 /* Moya.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Moya.framework; path = Carthage/Build/iOS/Moya.framework; sourceTree = "<group>"; };
+		365EE1632179F08100EE1AC9 /* Application.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
+		365EE1652179F0A100EE1AC9 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		365EE1692179F28F00EE1AC9 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		365EE16B2179F8B700EE1AC9 /* LockViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockViewController.swift; sourceTree = "<group>"; };
+		365EE16D2179FB0A00EE1AC9 /* FadeTransitionable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FadeTransitionable.swift; sourceTree = "<group>"; };
+		365EE16F2179FD6600EE1AC9 /* MainNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigator.swift; sourceTree = "<group>"; };
 		825030BD0FEAD48E3CF2EA40 /* Pods_Gist.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Gist.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6224119C636A3658F36486D /* Pods-Gist.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gist.release.xcconfig"; path = "Pods/Target Support Files/Pods-Gist/Pods-Gist.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -175,13 +185,14 @@
 		365EE0F92179D87400EE1AC9 /* Gist */ = {
 			isa = PBXGroup;
 			children = (
+				365EE1632179F08100EE1AC9 /* Application.swift */,
+				365EE0FA2179D87400EE1AC9 /* AppDelegate.swift */,
 				365EE14F2179E2FC00EE1AC9 /* Scenes */,
 				365EE1502179E30700EE1AC9 /* Model */,
 				365EE1512179E30E00EE1AC9 /* Utilities */,
 				365EE1522179E31900EE1AC9 /* Extensions */,
 				365EE1532179E32200EE1AC9 /* Protocols */,
 				365EE1542179E32C00EE1AC9 /* Resouces */,
-				365EE0FA2179D87400EE1AC9 /* AppDelegate.swift */,
 				365EE0FC2179D87400EE1AC9 /* ViewController.swift */,
 				365EE1062179D87600EE1AC9 /* Info.plist */,
 			);
@@ -241,6 +252,10 @@
 		365EE14F2179E2FC00EE1AC9 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				365EE1652179F0A100EE1AC9 /* RootViewController.swift */,
+				365EE1672179F25B00EE1AC9 /* Splash */,
+				365EE1682179F26700EE1AC9 /* Lock */,
+				365EE16F2179FD6600EE1AC9 /* MainNavigator.swift */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -269,6 +284,7 @@
 		365EE1532179E32200EE1AC9 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				365EE16D2179FB0A00EE1AC9 /* FadeTransitionable.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -276,11 +292,26 @@
 		365EE1542179E32C00EE1AC9 /* Resouces */ = {
 			isa = PBXGroup;
 			children = (
-				365EE0FE2179D87400EE1AC9 /* Main.storyboard */,
 				365EE1012179D87600EE1AC9 /* Assets.xcassets */,
 				365EE1032179D87600EE1AC9 /* LaunchScreen.storyboard */,
 			);
 			path = Resouces;
+			sourceTree = "<group>";
+		};
+		365EE1672179F25B00EE1AC9 /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				365EE1692179F28F00EE1AC9 /* SplashViewController.swift */,
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
+		365EE1682179F26700EE1AC9 /* Lock */ = {
+			isa = PBXGroup;
+			children = (
+				365EE16B2179F8B700EE1AC9 /* LockViewController.swift */,
+			);
+			path = Lock;
 			sourceTree = "<group>";
 		};
 		717A480253CB7D4D5448113C /* Pods */ = {
@@ -420,7 +451,6 @@
 			files = (
 				365EE1052179D87600EE1AC9 /* LaunchScreen.storyboard in Resources */,
 				365EE1022179D87600EE1AC9 /* Assets.xcassets in Resources */,
-				365EE1002179D87400EE1AC9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -494,8 +524,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				365EE1642179F08100EE1AC9 /* Application.swift in Sources */,
 				365EE0FD2179D87400EE1AC9 /* ViewController.swift in Sources */,
+				365EE16E2179FB0A00EE1AC9 /* FadeTransitionable.swift in Sources */,
+				365EE1662179F0A100EE1AC9 /* RootViewController.swift in Sources */,
+				365EE16C2179F8B700EE1AC9 /* LockViewController.swift in Sources */,
 				365EE0FB2179D87400EE1AC9 /* AppDelegate.swift in Sources */,
+				365EE1702179FD6600EE1AC9 /* MainNavigator.swift in Sources */,
+				365EE16A2179F28F00EE1AC9 /* SplashViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -529,14 +565,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		365EE0FE2179D87400EE1AC9 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				365EE0FF2179D87400EE1AC9 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		365EE1032179D87600EE1AC9 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
