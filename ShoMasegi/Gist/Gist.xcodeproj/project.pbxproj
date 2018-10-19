@@ -147,11 +147,14 @@
 		365EE0F92179D87400EE1AC9 /* Gist */ = {
 			isa = PBXGroup;
 			children = (
+				365EE14F2179E2FC00EE1AC9 /* Scenes */,
+				365EE1502179E30700EE1AC9 /* Model */,
+				365EE1512179E30E00EE1AC9 /* Utilities */,
+				365EE1522179E31900EE1AC9 /* Extensions */,
+				365EE1532179E32200EE1AC9 /* Protocols */,
+				365EE1542179E32C00EE1AC9 /* Resouces */,
 				365EE0FA2179D87400EE1AC9 /* AppDelegate.swift */,
 				365EE0FC2179D87400EE1AC9 /* ViewController.swift */,
-				365EE0FE2179D87400EE1AC9 /* Main.storyboard */,
-				365EE1012179D87600EE1AC9 /* Assets.xcassets */,
-				365EE1032179D87600EE1AC9 /* LaunchScreen.storyboard */,
 				365EE1062179D87600EE1AC9 /* Info.plist */,
 			);
 			path = Gist;
@@ -160,6 +163,8 @@
 		365EE12E2179E00600EE1AC9 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				365EE14E2179E2CA00EE1AC9 /* UseCases */,
+				365EE14D2179E2B900EE1AC9 /* Entities */,
 				365EE12F2179E00600EE1AC9 /* Domain.h */,
 				365EE1302179E00600EE1AC9 /* Info.plist */,
 			);
@@ -169,10 +174,85 @@
 		365EE1402179E01D00EE1AC9 /* NetworkPlatform */ = {
 			isa = PBXGroup;
 			children = (
+				365EE14C2179E25300EE1AC9 /* Network */,
+				365EE14B2179E24100EE1AC9 /* UseCases */,
 				365EE1412179E01E00EE1AC9 /* NetworkPlatform.h */,
 				365EE1422179E01E00EE1AC9 /* Info.plist */,
 			);
 			path = NetworkPlatform;
+			sourceTree = "<group>";
+		};
+		365EE14B2179E24100EE1AC9 /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		365EE14C2179E25300EE1AC9 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		365EE14D2179E2B900EE1AC9 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		365EE14E2179E2CA00EE1AC9 /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		365EE14F2179E2FC00EE1AC9 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		365EE1502179E30700EE1AC9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		365EE1512179E30E00EE1AC9 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		365EE1522179E31900EE1AC9 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		365EE1532179E32200EE1AC9 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		365EE1542179E32C00EE1AC9 /* Resouces */ = {
+			isa = PBXGroup;
+			children = (
+				365EE0FE2179D87400EE1AC9 /* Main.storyboard */,
+				365EE1012179D87600EE1AC9 /* Assets.xcassets */,
+				365EE1032179D87600EE1AC9 /* LaunchScreen.storyboard */,
+			);
+			path = Resouces;
 			sourceTree = "<group>";
 		};
 		717A480253CB7D4D5448113C /* Pods */ = {
