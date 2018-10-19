@@ -1,2 +1,8 @@
+github "Alamofire/Alamofire" "4.7.3"
+github "Moya/Moya" "e6fe0e99c54371a9d0553c135ee715e22eb68dcf"
+github "ReactiveCocoa/ReactiveSwift" "3.1.0"
 github "ReactiveX/RxSwift" "4.3.1"
+github "SVProgressHUD/SVProgressHUD" "2.2.5"
 github "SnapKit/SnapKit" "4.0.1"
+github "antitypical/Result" "3.2.4"
+github "kean/Nuke" "7.4.2"

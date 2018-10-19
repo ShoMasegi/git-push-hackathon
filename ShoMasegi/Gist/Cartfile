@@ -1,2 +1,12 @@
+# networking
+github "Moya/Moya" "xcode_9.3"
+
+# architecture
 github "ReactiveX/RxSwift" ~> 4.0
+
+# image
+github "kean/Nuke" ~> 7.0
+
+# ui
 github "SnapKit/SnapKit"
+github "SVProgressHUD/SVProgressHUD"
