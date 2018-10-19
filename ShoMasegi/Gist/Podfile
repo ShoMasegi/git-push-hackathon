@@ -1,0 +1,4 @@
+platform :ios, '11.0'
+target 'Gist' do
+  use_frameworks!
+end
