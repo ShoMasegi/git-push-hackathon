@@ -1,5 +1,10 @@
 import UIKit
 import SnapKit
+import RxCocoa
+import RxSwift
+import Moya
+import NetworkPlatform
+import Domain
 
 class SplashViewController: UIViewController {
     
@@ -16,6 +21,8 @@ class SplashViewController: UIViewController {
         prepare()
     }
 
+    private let bag = DisposeBag()
+
     private lazy var logoView: UILabel = {
         let label = UILabel()
         label.text = "Gist"
@@ -31,11 +38,32 @@ class SplashViewController: UIViewController {
     }
 
     private func prepare() {
-        let navigationController = UINavigationController()
-        let navigator = MainNavigator(navigationController: navigationController)
-        Application.shared.rootViewController.animateFadeTransition(to: navigationController) {
-            navigator.toRoot()
-        }
+
+        Networking.newDefaultNetworking()
+                .request(.login(username: "ShoMasegi", password: "ShoMasegi0227", otp: nil))
+                .filterAPIError()
+                .map(to: BasicAuthToken.self)
+                .observeOn(MainScheduler.instance)
+                .subscribe(onNext: { response in
+                    print("success: \(response.data.token)")
+                }, onError: { error in
+                    if let apiError = error as? APIError {
+                        print(apiError.message)
+                    } else {
+                        print(error.localizedDescription)
+                    }
+                })
+                .disposed(by: bag)
+//
+//        viewModel.getEvens(onSuccess: { _ in
+//            let navigationController = UINavigationController()
+//            let navigator = MainNavigator(navigationController: navigationController)
+//            Application.shared.rootViewController.animateFadeTransition(to: navigationController) {
+//                navigator.toRoot()
+//            }
+//        }, onError: { message in
+//            self.presentAlert(message: message)
+//        })
     }
 
     func appDidBecomeActive() {
