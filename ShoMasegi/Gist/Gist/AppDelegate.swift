@@ -1,4 +1,7 @@
 import UIKit
+import Domain
+import Library
+import KeychainAccess
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -9,6 +12,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        AppEnvironment.replaceCurrentEnvironment(
+                AppEnvironment.fromStorage(
+                        userDefaults: UserDefaults.standard,
+                        keychain: Keychain()
+                )
+        )
         setupNavigationBar()
         setupWindow()
         return true

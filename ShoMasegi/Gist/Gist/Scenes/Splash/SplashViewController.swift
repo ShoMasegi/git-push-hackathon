@@ -7,8 +7,11 @@ import NetworkPlatform
 import Domain
 
 class SplashViewController: UIViewController {
-    
+    private let viewModel: SplashViewModel
+
     init() {
+        let provider = UseCaseProvider(networking: Networking.newDefaultNetworking())
+        viewModel = SplashViewModel(useCase: provider.makeUserUserCase())
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -38,32 +41,22 @@ class SplashViewController: UIViewController {
     }
 
     private func prepare() {
+        viewModel.user(onSuccess: { _ in
+            let navigationController = UINavigationController()
+            let provider = Application.shared.defaultUseCaseProvider()
+            let navigator = GistNavigator(provider: provider, navigationController: navigationController)
+            Application.shared.rootViewController.animateFadeTransition(to: navigationController) {
+                navigator.toRoot()
+            }
+        }, onError: { _ in
+            let navigationController = UINavigationController()
+            let provider = UseCaseProvider(networking: Networking.newDefaultNetworking())
+            let navigator = LoginNavigator(provider: provider, navigationController: navigationController)
+            Application.shared.rootViewController.animateFadeTransition(to: navigationController) {
+                navigator.toRoot()
+            }
+        })
 
-        Networking.newDefaultNetworking()
-                .request(.login(username: "ShoMasegi", password: "ShoMasegi0227", otp: nil))
-                .filterAPIError()
-                .map(to: BasicAuthToken.self)
-                .observeOn(MainScheduler.instance)
-                .subscribe(onNext: { response in
-                    print("success: \(response.data.token)")
-                }, onError: { error in
-                    if let apiError = error as? APIError {
-                        print(apiError.message)
-                    } else {
-                        print(error.localizedDescription)
-                    }
-                })
-                .disposed(by: bag)
-//
-//        viewModel.getEvens(onSuccess: { _ in
-//            let navigationController = UINavigationController()
-//            let navigator = MainNavigator(navigationController: navigationController)
-//            Application.shared.rootViewController.animateFadeTransition(to: navigationController) {
-//                navigator.toRoot()
-//            }
-//        }, onError: { message in
-//            self.presentAlert(message: message)
-//        })
     }
 
     func appDidBecomeActive() {

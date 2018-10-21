@@ -1,30 +1,44 @@
-//
-//  LoginViewController.swift
-//  Gist
-//
-//  Created by 柵木奨 on 2018/10/19.
-//  Copyright © 2018年 ShoMasegi. All rights reserved.
-//
-
 import UIKit
+import SnapKit
+import RxSwift
+import NetworkPlatform
 
 class LoginViewController: UIViewController {
+    private let viewModel: LoginViewModel
+
+    init(viewModel: LoginViewModel) {
+        self.viewModel = viewModel
+        super.init(nibName: nil, bundle: nil)
+    }
+
+    required init?(coder _: NSCoder) { fatalError() }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        view.backgroundColor = .white
+        setupSubviews()
+        login()
     }
-    
 
-    /*
-    // MARK: - Navigation
+    private lazy var logoView: UILabel = {
+        let label = UILabel()
+        label.text = "Login"
+        label.textAlignment = .center
+        return label
+    }()
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    private func setupSubviews() {
+        [logoView].forEach(view.addSubview)
+        logoView.snp.makeConstraints {
+            $0.center.equalToSuperview()
+        }
     }
-    */
 
+    private func login() {
+        viewModel.login(onSuccess: { authToken in
+            print(authToken.token)
+        }, onError: { message in
+            print(message)
+        })
+    }
 }

@@ -5,6 +5,7 @@ import Library
 
 public enum GAPI {
     case login(username: String, password: String, otp: String?)
+    case user()
 }
 
 extension GAPI: TargetType {
@@ -31,6 +32,8 @@ extension GAPI: TargetType {
         switch self {
         case .login:
             return "authorizations"
+        case .user:
+            return "user"
         default: return ""
         }
     }
