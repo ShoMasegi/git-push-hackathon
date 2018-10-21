@@ -1,10 +1,14 @@
 import UIKit
+import Domain
 
-final class MainNavigator {
+final class GistNavigator {
 
+    private let provider: NetworkUseCaseProvider
     private weak var navigationController: UINavigationController?
 
-    init(navigationController: UINavigationController?) {
+    init(provider: NetworkUseCaseProvider,
+         navigationController: UINavigationController?) {
+        self.provider = provider
         self.navigationController = navigationController
     }
 

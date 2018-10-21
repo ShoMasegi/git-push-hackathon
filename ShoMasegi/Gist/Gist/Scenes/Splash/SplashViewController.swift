@@ -1,9 +1,17 @@
 import UIKit
 import SnapKit
+import RxCocoa
+import RxSwift
+import Moya
+import NetworkPlatform
+import Domain
 
 class SplashViewController: UIViewController {
-    
+    private let viewModel: SplashViewModel
+
     init() {
+        let provider = UseCaseProvider(networking: Networking.newDefaultNetworking())
+        viewModel = SplashViewModel(useCase: provider.makeUserUserCase())
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -15,6 +23,8 @@ class SplashViewController: UIViewController {
         setupSubviews()
         prepare()
     }
+
+    private let bag = DisposeBag()
 
     private lazy var logoView: UILabel = {
         let label = UILabel()
@@ -31,11 +41,22 @@ class SplashViewController: UIViewController {
     }
 
     private func prepare() {
-        let navigationController = UINavigationController()
-        let navigator = MainNavigator(navigationController: navigationController)
-        Application.shared.rootViewController.animateFadeTransition(to: navigationController) {
-            navigator.toRoot()
-        }
+        viewModel.user(onSuccess: { _ in
+            let navigationController = UINavigationController()
+            let provider = Application.shared.defaultUseCaseProvider()
+            let navigator = GistNavigator(provider: provider, navigationController: navigationController)
+            Application.shared.rootViewController.animateFadeTransition(to: navigationController) {
+                navigator.toRoot()
+            }
+        }, onError: { _ in
+            let navigationController = UINavigationController()
+            let provider = UseCaseProvider(networking: Networking.newDefaultNetworking())
+            let navigator = LoginNavigator(provider: provider, navigationController: navigationController)
+            Application.shared.rootViewController.animateFadeTransition(to: navigationController) {
+                navigator.toRoot()
+            }
+        })
+
     }
 
     func appDidBecomeActive() {
