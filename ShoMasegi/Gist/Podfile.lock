@@ -1,3 +1,58 @@
-PODFILE CHECKSUM: 6103780268289af196001668b6ed7c3bb5e1b5a2
+PODS:
+  - MaterialComponents/BottomAppBar (67.1.0):
+    - MaterialComponents/Buttons
+    - MaterialComponents/NavigationBar
+    - MaterialComponents/private/Math
+    - MDFInternationalization
+  - MaterialComponents/ButtonBar (67.1.0):
+    - MaterialComponents/Buttons
+    - MaterialComponents/private/Application
+    - MDFInternationalization
+  - MaterialComponents/Buttons (67.1.0):
+    - MaterialComponents/Ink
+    - MaterialComponents/private/Math
+    - MaterialComponents/private/Shapes
+    - MaterialComponents/ShadowElevations
+    - MaterialComponents/ShadowLayer
+    - MaterialComponents/Typography
+    - MDFInternationalization
+    - MDFTextAccessibility
+  - MaterialComponents/Ink (67.1.0):
+    - MaterialComponents/private/Math
+  - MaterialComponents/NavigationBar (67.1.0):
+    - MaterialComponents/ButtonBar
+    - MaterialComponents/private/Math
+    - MaterialComponents/Typography
+    - MDFInternationalization
+    - MDFTextAccessibility
+  - MaterialComponents/private/Application (67.1.0)
+  - MaterialComponents/private/Math (67.1.0)
+  - MaterialComponents/private/Shapes (67.1.0):
+    - MaterialComponents/private/Math
+    - MaterialComponents/ShadowLayer
+  - MaterialComponents/ShadowElevations (67.1.0)
+  - MaterialComponents/ShadowLayer (67.1.0):
+    - MaterialComponents/ShadowElevations
+  - MaterialComponents/Typography (67.1.0):
+    - MaterialComponents/private/Application
+    - MaterialComponents/private/Math
+  - MDFInternationalization (1.1.0)
+  - MDFTextAccessibility (1.2.0)
+
+DEPENDENCIES:
+  - MaterialComponents/BottomAppBar
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - MaterialComponents
+    - MDFInternationalization
+    - MDFTextAccessibility
+
+SPEC CHECKSUMS:
+  MaterialComponents: 54a3d649dc4072345c891089ad097d94e576a8b0
+  MDFInternationalization: b5b8626628abf026e630e5ebaeee563037712cbb
+  MDFTextAccessibility: 94098925e0853551c5a311ce7c1ecefbe297cdb6
+
+PODFILE CHECKSUM: f623fee8174adf3231312071580fb7e6b7176073
 
 COCOAPODS: 1.5.3
