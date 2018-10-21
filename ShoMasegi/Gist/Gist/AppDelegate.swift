@@ -50,6 +50,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     private func setupWindow() {
         UINavigationBar.appearance().tintColor = .white
         UINavigationBar.appearance().isHidden = true
+        UINavigationBar.appearance().barStyle = .black
+        UINavigationBar.appearance().isTranslucent = false
     }
 }
 
