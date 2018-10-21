@@ -19,18 +19,19 @@ class SplashViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .white
+        view.backgroundColor = .primary_main
         setupSubviews()
         prepare()
     }
 
     private let bag = DisposeBag()
 
-    private lazy var logoView: UILabel = {
-        let label = UILabel()
-        label.text = "Gist"
-        label.textAlignment = .center
-        return label
+    private lazy var logoView: UIImageView = {
+        let view = UIImageView()
+        view.image = UIImage(named: "logo")
+        view.clipsToBounds = true
+        view.contentMode = .scaleToFill
+        return view
     }()
 
     private func setupSubviews() {

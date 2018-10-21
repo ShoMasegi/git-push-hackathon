@@ -12,7 +12,7 @@ class RootViewController: UIViewController, FadeTransitionable {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .white
+        view.backgroundColor = .primary_main
         setupCurrent()
     }
 
