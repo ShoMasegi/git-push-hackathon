@@ -26,6 +26,7 @@
 		364800F2217C3DA000BED8D2 /* UserUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364800F1217C3DA000BED8D2 /* UserUseCase.swift */; };
 		364800F4217C3E9C00BED8D2 /* AuthUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364800F3217C3E9C00BED8D2 /* AuthUser.swift */; };
 		364800F6217C432400BED8D2 /* AuthUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364800F5217C432400BED8D2 /* AuthUser.swift */; };
+		364800F9217C78DD00BED8D2 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364800F8217C78DD00BED8D2 /* UIColor+Extension.swift */; };
 		365EE0FB2179D87400EE1AC9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 365EE0FA2179D87400EE1AC9 /* AppDelegate.swift */; };
 		365EE0FD2179D87400EE1AC9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 365EE0FC2179D87400EE1AC9 /* ViewController.swift */; };
 		365EE1022179D87600EE1AC9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 365EE1012179D87600EE1AC9 /* Assets.xcassets */; };
@@ -128,6 +129,7 @@
 		364800F1217C3DA000BED8D2 /* UserUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserUseCase.swift; sourceTree = "<group>"; };
 		364800F3217C3E9C00BED8D2 /* AuthUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthUser.swift; sourceTree = "<group>"; };
 		364800F5217C432400BED8D2 /* AuthUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthUser.swift; sourceTree = "<group>"; };
+		364800F8217C78DD00BED8D2 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		365EE0F72179D87400EE1AC9 /* Gist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gist.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		365EE0FA2179D87400EE1AC9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		365EE0FC2179D87400EE1AC9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -240,6 +242,14 @@
 				825030BD0FEAD48E3CF2EA40 /* Pods_Gist.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		364800F7217C78CF00BED8D2 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				364800F8217C78DD00BED8D2 /* UIColor+Extension.swift */,
+			);
+			path = UI;
 			sourceTree = "<group>";
 		};
 		365EE0EE2179D87400EE1AC9 = {
@@ -379,6 +389,7 @@
 		365EE1522179E31900EE1AC9 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				364800F7217C78CF00BED8D2 /* UI */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -713,6 +724,7 @@
 				365EE1662179F0A100EE1AC9 /* RootViewController.swift in Sources */,
 				364800E6217BADE300BED8D2 /* LoginViewModel.swift in Sources */,
 				364800EE217C3C5200BED8D2 /* SplashViewModel.swift in Sources */,
+				364800F9217C78DD00BED8D2 /* UIColor+Extension.swift in Sources */,
 				365EE16C2179F8B700EE1AC9 /* LockViewController.swift in Sources */,
 				364800F6217C432400BED8D2 /* AuthUser.swift in Sources */,
 				365EE0FB2179D87400EE1AC9 /* AppDelegate.swift in Sources */,
