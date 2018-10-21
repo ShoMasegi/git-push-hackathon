@@ -10,6 +10,7 @@ final class GistNavigator {
          navigationController: UINavigationController?) {
         self.provider = provider
         self.navigationController = navigationController
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
     }
 
     func toRoot() {
