@@ -72,9 +72,6 @@ extension NetworkingType {
                     let authHeader = "token " + token
                     request.addValue(authHeader, forHTTPHeaderField: "Authorization")
                 }
-                if let otp = AppEnvironment.current.otp {
-                    request.addValue(otp, forHTTPHeaderField: "X-GitHub-OTP")
-                }
                 closure(.success(request))
             } catch let error {
                 closure(.failure(MoyaError.underlying(error, nil)))

@@ -13,6 +13,7 @@ public final class LoginUseCase: Domain.LoginUseCase {
 
     public func login(username: String, password: String, otp: String?) -> Observable<Domain.Response<Domain.BasicAuthToken>> {
         return network.request(.login(username: username, password: password, otp: otp))
+                .filterAPIError()
                 .map(to: Domain.BasicAuthToken.self)
     }
 }

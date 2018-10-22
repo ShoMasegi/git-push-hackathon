@@ -86,17 +86,14 @@ public struct AppEnvironment {
 
 public struct Environment {
     public let token: String?
-    public let otp: String?
     public let userDefaults: KeyValuesStoreType
     public let keychain: Keychain
     public init(
             token: String? = nil,
-            otp: String? = nil,
             userDefaults: KeyValuesStoreType = UserDefaults.standard,
             keychain: Keychain = Keychain()
     ) {
         self.token = token
-        self.otp = otp
         self.userDefaults = userDefaults
         self.keychain = keychain
     }

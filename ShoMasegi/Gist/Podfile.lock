@@ -20,6 +20,20 @@ PODS:
     - MaterialComponents/Typography
     - MDFInternationalization
     - MDFTextAccessibility
+  - "MaterialComponents/Buttons+ButtonThemer (67.1.0)":
+    - MaterialComponents/Buttons
+    - "MaterialComponents/Buttons+ColorThemer"
+    - "MaterialComponents/Buttons+ShapeThemer"
+    - "MaterialComponents/Buttons+TypographyThemer"
+  - "MaterialComponents/Buttons+ColorThemer (67.1.0)":
+    - MaterialComponents/Buttons
+    - MaterialComponents/schemes/Color
+  - "MaterialComponents/Buttons+ShapeThemer (67.1.0)":
+    - MaterialComponents/Buttons
+    - MaterialComponents/schemes/Shape
+  - "MaterialComponents/Buttons+TypographyThemer (67.1.0)":
+    - MaterialComponents/Buttons
+    - MaterialComponents/schemes/Typography
   - MaterialComponents/Ink (67.1.0):
     - MaterialComponents/private/Math
   - MaterialComponents/NavigationBar (67.1.0):
@@ -30,10 +44,16 @@ PODS:
     - MDFTextAccessibility
   - MaterialComponents/private/Application (67.1.0)
   - MaterialComponents/private/Math (67.1.0)
+  - MaterialComponents/private/ShapeLibrary (67.1.0):
+    - MaterialComponents/private/Math
+    - MaterialComponents/private/Shapes
   - MaterialComponents/private/Shapes (67.1.0):
     - MaterialComponents/private/Math
     - MaterialComponents/ShadowLayer
   - MaterialComponents/schemes/Color (67.1.0)
+  - MaterialComponents/schemes/Shape (67.1.0):
+    - MaterialComponents/private/ShapeLibrary
+    - MaterialComponents/private/Shapes
   - MaterialComponents/schemes/Typography (67.1.0)
   - MaterialComponents/ShadowElevations (67.1.0)
   - MaterialComponents/ShadowLayer (67.1.0):
@@ -50,6 +70,7 @@ PODS:
 DEPENDENCIES:
   - MaterialComponents/BottomAppBar
   - "MaterialComponents/BottomAppBar+ColorThemer"
+  - "MaterialComponents/Buttons+ButtonThemer"
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -62,6 +83,6 @@ SPEC CHECKSUMS:
   MDFInternationalization: b5b8626628abf026e630e5ebaeee563037712cbb
   MDFTextAccessibility: 94098925e0853551c5a311ce7c1ecefbe297cdb6
 
-PODFILE CHECKSUM: 7c8de80684521e9d75dd351dae193a59f925305f
+PODFILE CHECKSUM: 16891432e13740b859aab41c2a2f68afa4fd6a84
 
 COCOAPODS: 1.6.0.beta.2

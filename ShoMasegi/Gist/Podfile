@@ -5,6 +5,7 @@ use_frameworks!
 target 'Gist' do
   pod 'MaterialComponents/BottomAppBar'
   pod 'MaterialComponents/BottomAppBar+ColorThemer'
+  pod 'MaterialComponents/Buttons+ButtonThemer'
 end
 
 post_install do |installer|

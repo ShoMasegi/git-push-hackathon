@@ -60,10 +60,10 @@ extension GAPI: TargetType {
     public var headers: [String: String]? {
         switch self {
         case .login(let username, let password, let otp):
-            if let password = otp {
+            if let onetime = otp {
                 return [
                     "Authorization": Credentials.basic(userName: username, password: password),
-                    "X-GitHub-OTP": password
+                    "X-GitHub-OTP": onetime
                 ]
             } else {
                 return ["Authorization": Credentials.basic(userName: username, password: password)]

@@ -38,6 +38,8 @@ class SplashViewController: UIViewController {
         [logoView].forEach(view.addSubview)
         logoView.snp.makeConstraints {
             $0.center.equalToSuperview()
+            $0.width.equalTo(150)
+            $0.height.equalTo(90)
         }
     }
 
