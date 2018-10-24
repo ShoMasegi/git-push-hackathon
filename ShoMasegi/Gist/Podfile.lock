@@ -1,4 +1,15 @@
 PODS:
+  - MaterialComponents/AppBar (67.1.0):
+    - MaterialComponents/FlexibleHeader
+    - MaterialComponents/HeaderStackView
+    - MaterialComponents/NavigationBar
+    - MaterialComponents/private/Application
+    - MaterialComponents/private/Icons/ic_arrow_back
+    - MaterialComponents/private/UIMetrics
+    - MaterialComponents/ShadowElevations
+    - MaterialComponents/ShadowLayer
+    - MaterialComponents/Typography
+    - MDFInternationalization
   - MaterialComponents/BottomAppBar (67.1.0):
     - MaterialComponents/Buttons
     - MaterialComponents/NavigationBar
@@ -34,6 +45,11 @@ PODS:
   - "MaterialComponents/Buttons+TypographyThemer (67.1.0)":
     - MaterialComponents/Buttons
     - MaterialComponents/schemes/Typography
+  - MaterialComponents/FlexibleHeader (67.1.0):
+    - MaterialComponents/private/Application
+    - MaterialComponents/private/UIMetrics
+    - MDFTextAccessibility
+  - MaterialComponents/HeaderStackView (67.1.0)
   - MaterialComponents/Ink (67.1.0):
     - MaterialComponents/private/Math
   - MaterialComponents/NavigationBar (67.1.0):
@@ -43,6 +59,9 @@ PODS:
     - MDFInternationalization
     - MDFTextAccessibility
   - MaterialComponents/private/Application (67.1.0)
+  - MaterialComponents/private/Icons/Base (67.1.0)
+  - MaterialComponents/private/Icons/ic_arrow_back (67.1.0):
+    - MaterialComponents/private/Icons/Base
   - MaterialComponents/private/Math (67.1.0)
   - MaterialComponents/private/ShapeLibrary (67.1.0):
     - MaterialComponents/private/Math
@@ -50,6 +69,8 @@ PODS:
   - MaterialComponents/private/Shapes (67.1.0):
     - MaterialComponents/private/Math
     - MaterialComponents/ShadowLayer
+  - MaterialComponents/private/UIMetrics (67.1.0):
+    - MaterialComponents/private/Application
   - MaterialComponents/schemes/Color (67.1.0)
   - MaterialComponents/schemes/Shape (67.1.0):
     - MaterialComponents/private/ShapeLibrary
@@ -68,6 +89,7 @@ PODS:
   - MDFTextAccessibility (1.2.0)
 
 DEPENDENCIES:
+  - MaterialComponents/AppBar
   - MaterialComponents/BottomAppBar
   - "MaterialComponents/BottomAppBar+ColorThemer"
   - "MaterialComponents/Buttons+ButtonThemer"
@@ -83,6 +105,6 @@ SPEC CHECKSUMS:
   MDFInternationalization: b5b8626628abf026e630e5ebaeee563037712cbb
   MDFTextAccessibility: 94098925e0853551c5a311ce7c1ecefbe297cdb6
 
-PODFILE CHECKSUM: 16891432e13740b859aab41c2a2f68afa4fd6a84
+PODFILE CHECKSUM: bd9fdc13f164f5ffe0be5252ec4d1eece54a8c47
 
 COCOAPODS: 1.6.0.beta.2

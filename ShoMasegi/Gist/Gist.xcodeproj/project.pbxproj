@@ -73,7 +73,24 @@
 		367A6413217E427C001AC361 /* ErrorTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367A6412217E427C001AC361 /* ErrorTracker.swift */; };
 		367A6415217E431F001AC361 /* Observable+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367A6414217E431E001AC361 /* Observable+Extensions.swift */; };
 		367A6417217E44BE001AC361 /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364800DB217B817800BED8D2 /* Credentials.swift */; };
-		36E1D7AE217B3D55005A6ECE /* AuthModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E1D7AD217B3D55005A6ECE /* AuthModel.swift */; };
+		367A6419217E7582001AC361 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367A6418217E7582001AC361 /* WebViewController.swift */; };
+		367A641B217E9032001AC361 /* AuthToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367A641A217E9032001AC361 /* AuthToken.swift */; };
+		367A641D217EB842001AC361 /* Gist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367A641C217EB842001AC361 /* Gist.swift */; };
+		367A641F217EB84D001AC361 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367A641E217EB84D001AC361 /* User.swift */; };
+		367A6421217EB85C001AC361 /* Gist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367A6420217EB85C001AC361 /* Gist.swift */; };
+		367A6423217EB866001AC361 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367A6422217EB866001AC361 /* User.swift */; };
+		367A6425217EB87B001AC361 /* GistUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367A6424217EB87B001AC361 /* GistUseCase.swift */; };
+		367A6427217EB89F001AC361 /* GistUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367A6426217EB89F001AC361 /* GistUseCase.swift */; };
+		367A6429217EB8F7001AC361 /* UIScroll+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367A6428217EB8F7001AC361 /* UIScroll+Rx.swift */; };
+		367A642B217EB90D001AC361 /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367A642A217EB90D001AC361 /* UITableView+Extension.swift */; };
+		367A642D217EB942001AC361 /* GistViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367A642C217EB942001AC361 /* GistViewModel.swift */; };
+		367A642F217EB94F001AC361 /* GistTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367A642E217EB94F001AC361 /* GistTableViewCell.swift */; };
+		367A6431217EBC06001AC361 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367A6430217EBC06001AC361 /* File.swift */; };
+		367A6433217F223D001AC361 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367A6432217F223D001AC361 /* File.swift */; };
+		367A6435217F2637001AC361 /* Scope.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367A6434217F2637001AC361 /* Scope.swift */; };
+		367A6437217FDD25001AC361 /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367A6436217FDD25001AC361 /* Reusable.swift */; };
+		367A6439217FEA6D001AC361 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367A6438217FEA6D001AC361 /* UIViewController+Extension.swift */; };
+		367A643B217FF566001AC361 /* UIStackView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367A643A217FF566001AC361 /* UIStackView+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -183,7 +200,24 @@
 		367A6410217E4267001AC361 /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 		367A6412217E427C001AC361 /* ErrorTracker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorTracker.swift; sourceTree = "<group>"; };
 		367A6414217E431E001AC361 /* Observable+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Observable+Extensions.swift"; sourceTree = "<group>"; };
-		36E1D7AD217B3D55005A6ECE /* AuthModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthModel.swift; sourceTree = "<group>"; };
+		367A6418217E7582001AC361 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		367A641A217E9032001AC361 /* AuthToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthToken.swift; sourceTree = "<group>"; };
+		367A641C217EB842001AC361 /* Gist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gist.swift; sourceTree = "<group>"; };
+		367A641E217EB84D001AC361 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		367A6420217EB85C001AC361 /* Gist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gist.swift; sourceTree = "<group>"; };
+		367A6422217EB866001AC361 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		367A6424217EB87B001AC361 /* GistUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GistUseCase.swift; sourceTree = "<group>"; };
+		367A6426217EB89F001AC361 /* GistUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GistUseCase.swift; sourceTree = "<group>"; };
+		367A6428217EB8F7001AC361 /* UIScroll+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScroll+Rx.swift"; sourceTree = "<group>"; };
+		367A642A217EB90D001AC361 /* UITableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
+		367A642C217EB942001AC361 /* GistViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GistViewModel.swift; sourceTree = "<group>"; };
+		367A642E217EB94F001AC361 /* GistTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GistTableViewCell.swift; sourceTree = "<group>"; };
+		367A6430217EBC06001AC361 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
+		367A6432217F223D001AC361 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
+		367A6434217F2637001AC361 /* Scope.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scope.swift; sourceTree = "<group>"; };
+		367A6436217FDD25001AC361 /* Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
+		367A6438217FEA6D001AC361 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		367A643A217FF566001AC361 /* UIStackView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+Extension.swift"; sourceTree = "<group>"; };
 		704E8AF76F2D028EABF4C079 /* Pods-Gist.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gist.debug.xcconfig"; path = "Target Support Files/Pods-Gist/Pods-Gist.debug.xcconfig"; sourceTree = "<group>"; };
 		A26BBD0612264DF74F6F0C26 /* Pods_Gist.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Gist.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -264,6 +298,9 @@
 			isa = PBXGroup;
 			children = (
 				364800F8217C78DD00BED8D2 /* UIColor+Extension.swift */,
+				367A642A217EB90D001AC361 /* UITableView+Extension.swift */,
+				367A6438217FEA6D001AC361 /* UIViewController+Extension.swift */,
+				367A643A217FF566001AC361 /* UIStackView+Extension.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -338,6 +375,7 @@
 				364800E3217BAA1800BED8D2 /* LoginUseCase.swift */,
 				364800F1217C3DA000BED8D2 /* UserUseCase.swift */,
 				364800DD217BA7D100BED8D2 /* UseCaseProvider.swift */,
+				367A6426217EB89F001AC361 /* GistUseCase.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -355,12 +393,16 @@
 		365EE14D2179E2B900EE1AC9 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
-				36E1D7AD217B3D55005A6ECE /* AuthModel.swift */,
 				364800F3217C3E9C00BED8D2 /* AuthUser.swift */,
 				364800D7217B6D8D00BED8D2 /* APIError.swift */,
+				367A641A217E9032001AC361 /* AuthToken.swift */,
 				364800D1217B686700BED8D2 /* BasicAuthToken.swift */,
 				364800D5217B6C6200BED8D2 /* ErrorResponse.swift */,
 				364800D3217B6B2D00BED8D2 /* Response.swift */,
+				367A641C217EB842001AC361 /* Gist.swift */,
+				367A641E217EB84D001AC361 /* User.swift */,
+				367A6432217F223D001AC361 /* File.swift */,
+				367A6434217F2637001AC361 /* Scope.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -371,6 +413,7 @@
 				364800E1217BAA0500BED8D2 /* LoginUseCase.swift */,
 				364800EF217C3D9000BED8D2 /* UserUseCase.swift */,
 				364800DF217BA84300BED8D2 /* UseCaseProvider.swift */,
+				367A6424217EB87B001AC361 /* GistUseCase.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -379,6 +422,7 @@
 			isa = PBXGroup;
 			children = (
 				365EE1652179F0A100EE1AC9 /* RootViewController.swift */,
+				367A6418217E7582001AC361 /* WebViewController.swift */,
 				367A6407217D37CF001AC361 /* Gist */,
 				365EE1682179F26700EE1AC9 /* Lock */,
 				365EE171217A22CD00EE1AC9 /* Login */,
@@ -391,6 +435,9 @@
 			isa = PBXGroup;
 			children = (
 				364800F5217C432400BED8D2 /* AuthUser.swift */,
+				367A6420217EB85C001AC361 /* Gist.swift */,
+				367A6422217EB866001AC361 /* User.swift */,
+				367A6430217EBC06001AC361 /* File.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -410,6 +457,7 @@
 			children = (
 				365EE16D2179FB0A00EE1AC9 /* FadeTransitionable.swift */,
 				364800E7217BAE3500BED8D2 /* ViewModelType.swift */,
+				367A6436217FDD25001AC361 /* Reusable.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -468,6 +516,8 @@
 			children = (
 				367A6408217D3834001AC361 /* GistViewController.swift */,
 				365EE16F2179FD6600EE1AC9 /* GistNavigator.swift */,
+				367A642C217EB942001AC361 /* GistViewModel.swift */,
+				367A642E217EB94F001AC361 /* GistTableViewCell.swift */,
 			);
 			path = Gist;
 			sourceTree = "<group>";
@@ -476,6 +526,7 @@
 			isa = PBXGroup;
 			children = (
 				367A640D217E29D4001AC361 /* FilledTextField+Rx.swift */,
+				367A6428217EB8F7001AC361 /* UIScroll+Rx.swift */,
 			);
 			path = Rx;
 			sourceTree = "<group>";
@@ -778,24 +829,35 @@
 			files = (
 				364800E8217BAE3500BED8D2 /* ViewModelType.swift in Sources */,
 				367A640B217DF390001AC361 /* FilledTextField.swift in Sources */,
+				367A6421217EB85C001AC361 /* Gist.swift in Sources */,
 				367A6411217E4267001AC361 /* ActivityIndicator.swift in Sources */,
 				365EE173217A236B00EE1AC9 /* LoginViewController.swift in Sources */,
+				367A6419217E7582001AC361 /* WebViewController.swift in Sources */,
 				365EE1642179F08100EE1AC9 /* Application.swift in Sources */,
 				364800EA217C353D00BED8D2 /* LoginNavigator.swift in Sources */,
+				367A643B217FF566001AC361 /* UIStackView+Extension.swift in Sources */,
 				365EE0FD2179D87400EE1AC9 /* ViewController.swift in Sources */,
+				367A6431217EBC06001AC361 /* File.swift in Sources */,
 				365EE16E2179FB0A00EE1AC9 /* FadeTransitionable.swift in Sources */,
 				367A640E217E29D5001AC361 /* FilledTextField+Rx.swift in Sources */,
 				365EE1662179F0A100EE1AC9 /* RootViewController.swift in Sources */,
 				364800E6217BADE300BED8D2 /* LoginViewModel.swift in Sources */,
 				364800EE217C3C5200BED8D2 /* SplashViewModel.swift in Sources */,
 				367A6409217D3834001AC361 /* GistViewController.swift in Sources */,
+				367A642D217EB942001AC361 /* GistViewModel.swift in Sources */,
 				364800F9217C78DD00BED8D2 /* UIColor+Extension.swift in Sources */,
+				367A6439217FEA6D001AC361 /* UIViewController+Extension.swift in Sources */,
 				365EE16C2179F8B700EE1AC9 /* LockViewController.swift in Sources */,
+				367A642B217EB90D001AC361 /* UITableView+Extension.swift in Sources */,
 				364800F6217C432400BED8D2 /* AuthUser.swift in Sources */,
 				365EE0FB2179D87400EE1AC9 /* AppDelegate.swift in Sources */,
 				365EE1702179FD6600EE1AC9 /* GistNavigator.swift in Sources */,
+				367A642F217EB94F001AC361 /* GistTableViewCell.swift in Sources */,
 				365EE16A2179F28F00EE1AC9 /* SplashViewController.swift in Sources */,
 				367A6413217E427C001AC361 /* ErrorTracker.swift in Sources */,
+				367A6437217FDD25001AC361 /* Reusable.swift in Sources */,
+				367A6429217EB8F7001AC361 /* UIScroll+Rx.swift in Sources */,
+				367A6423217EB866001AC361 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -805,10 +867,15 @@
 			files = (
 				364800D2217B686700BED8D2 /* BasicAuthToken.swift in Sources */,
 				364800E0217BA84300BED8D2 /* UseCaseProvider.swift in Sources */,
+				367A641D217EB842001AC361 /* Gist.swift in Sources */,
 				364800D6217B6C6200BED8D2 /* ErrorResponse.swift in Sources */,
-				36E1D7AE217B3D55005A6ECE /* AuthModel.swift in Sources */,
+				367A6435217F2637001AC361 /* Scope.swift in Sources */,
+				367A6425217EB87B001AC361 /* GistUseCase.swift in Sources */,
+				367A641B217E9032001AC361 /* AuthToken.swift in Sources */,
 				364800F0217C3D9000BED8D2 /* UserUseCase.swift in Sources */,
 				364800E2217BAA0500BED8D2 /* LoginUseCase.swift in Sources */,
+				367A6433217F223D001AC361 /* File.swift in Sources */,
+				367A641F217EB84D001AC361 /* User.swift in Sources */,
 				364800D4217B6B2D00BED8D2 /* Response.swift in Sources */,
 				364800F4217C3E9C00BED8D2 /* AuthUser.swift in Sources */,
 				364800D8217B6D8D00BED8D2 /* APIError.swift in Sources */,
@@ -821,6 +888,7 @@
 			files = (
 				364800DE217BA7D100BED8D2 /* UseCaseProvider.swift in Sources */,
 				365EE177217A293600EE1AC9 /* GAPI.swift in Sources */,
+				367A6427217EB89F001AC361 /* GistUseCase.swift in Sources */,
 				364800F2217C3DA000BED8D2 /* UserUseCase.swift in Sources */,
 				365EE17B217A295400EE1AC9 /* Response.swift in Sources */,
 				365EE179217A294400EE1AC9 /* Networking.swift in Sources */,

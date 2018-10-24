@@ -5,6 +5,12 @@ import RxCocoa
 import RxSwift
 
 final class LoginViewModel: ViewModelType {
+
+    var authorizeUrl: URL? {
+        // TDO: Nonsense
+        return URL(string: "https://github.com/login/oauth/authorize?client_id=\(AuthParameter().clientId)&scope=gist")
+    }
+
     private let useCase: LoginUseCase
     private let navigator: LoginNavigator
     private let bag = DisposeBag()
@@ -22,7 +28,6 @@ final class LoginViewModel: ViewModelType {
 extension LoginViewModel {
     struct Input {
         let loginButtonTap: Driver<Void>
-        let loginWithWebButtonTap: Driver<Void>
         let usernameDidChange: Driver<String?>
         let passwordDidChange: Driver<String?>
         let otpDidChange: Driver<String?>
@@ -31,8 +36,8 @@ extension LoginViewModel {
     struct Output {
         let isLoginButtonEnabled: Driver<Bool>
         let isLoading: Driver<Bool>
-        let error: Driver<Error>
         let isNeedOtp: Driver<Void>
+        let error: Driver<Error>
     }
 }
 
@@ -46,7 +51,7 @@ extension LoginViewModel {
                 Driver.combineLatest(input.usernameDidChange, input.passwordDidChange) { (username, password) -> Bool in
                     return !(username ?? "").isEmpty && !(password ?? "").isEmpty
                 }
-        // TODO: ここら辺なんとかしたい
+        // TODO: ここら辺綺麗にしたい.
         input.usernameDidChange.drive(onNext: { self.username = $0})
                 .disposed(by: bag)
         input.passwordDidChange.drive(onNext: { self.password = $0})
@@ -91,8 +96,26 @@ extension LoginViewModel {
                 .trackError(errorTracker)
                 .map { $0.data }
                 .observeOn(MainScheduler.instance)
-                .subscribe(onNext: { accessToken in
+                .subscribe(onNext: { [weak self] accessToken in
                     AppEnvironment.replaceCurrentEnvironment(token: accessToken.token)
+                    self?.navigator.toGist()
+                }).disposed(by: bag)
+    }
+
+    func login(code: String, onSuccess: @escaping () -> Void, onError: @escaping (String) -> Void) {
+        useCase.login(code: code)
+                .observeOn(MainScheduler.instance)
+                .map { $0.data }
+                .subscribe(onNext: { [weak self] authToken in
+                    AppEnvironment.replaceCurrentEnvironment(token: authToken.accessToken)
+                    onSuccess()
+                    self?.navigator.toGist()
+                }, onError: { error in
+                    if let apiError = error as? APIError {
+                        onError(apiError.message)
+                    } else {
+                        onError(error.localizedDescription)
+                    }
                 }).disposed(by: bag)
     }
 }

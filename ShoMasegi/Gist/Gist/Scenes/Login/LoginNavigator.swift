@@ -19,4 +19,10 @@ final class LoginNavigator {
         let viewController = LoginViewController(viewModel: viewModel)
         navigationController?.pushViewController(viewController, animated: true)
     }
+
+    func toGist() {
+        let provider = Application.shared.defaultUseCaseProvider()
+        let navigator = GistNavigator(provider: provider, navigationController: navigationController)
+        navigator.toRoot()
+    }
 }

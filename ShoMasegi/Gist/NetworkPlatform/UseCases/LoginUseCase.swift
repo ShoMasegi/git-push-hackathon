@@ -16,4 +16,10 @@ public final class LoginUseCase: Domain.LoginUseCase {
                 .filterAPIError()
                 .map(to: Domain.BasicAuthToken.self)
     }
+
+    public func login(code: String) -> Observable<Domain.Response<AuthToken>> {
+        return network.request(.loginweb(code: code))
+                .filterAPIError()
+                .map(to: Domain.AuthToken.self)
+    }
 }

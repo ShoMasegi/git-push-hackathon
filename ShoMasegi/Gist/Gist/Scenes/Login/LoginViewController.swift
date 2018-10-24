@@ -4,9 +4,10 @@ import RxSwift
 import RxCocoa
 import NetworkPlatform
 import SVProgressHUD
-
+import Domain
 
 class LoginViewController: UIViewController {
+
     private let viewModel: LoginViewModel
     private let bag = DisposeBag()
 
@@ -87,7 +88,7 @@ class LoginViewController: UIViewController {
     }()
     private lazy var loginButton: UIButton = {
         let button = UIButton()
-        button.backgroundColor = .secondary_main
+        button.backgroundColor = .primary_700
         button.titleLabel?.textColor = .white
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 16)
         button.setTitle("LOGIN", for: .normal)
@@ -102,6 +103,11 @@ class LoginViewController: UIViewController {
         button.titleLabel?.font = UIFont.systemFont(ofSize: 16)
         button.setTitle("Login with Web", for: .normal)
         button.clipsToBounds = true
+        button.rx.tap
+                .observeOn(MainScheduler.instance)
+                .subscribe(onNext: { [weak self] _ in
+                    self?.authorizeWithWeb()
+                }).disposed(by: bag)
         return button
     }()
     private var activeTextField: FilledTextField? = nil
@@ -109,13 +115,11 @@ class LoginViewController: UIViewController {
 
     private func bind() {
         let loginButtonTap = loginButton.rx.tap.asDriver()
-        let loginWithWebButtonTap = loginWithWebButton.rx.tap.asDriver()
         let usernameDidChanged = nameTextField.rx.textDidChange.asDriver()
         let passwordDidChanged = passwordTextField.rx.textDidChange.asDriver()
         let otpDidChanged = otpTextField.rx.textDidChange.asDriver()
         let input = LoginViewModel.Input(
                 loginButtonTap: loginButtonTap,
-                loginWithWebButtonTap: loginWithWebButtonTap,
                 usernameDidChange: usernameDidChanged,
                 passwordDidChange: passwordDidChanged,
                 otpDidChange: otpDidChanged
@@ -123,12 +127,17 @@ class LoginViewController: UIViewController {
         let output = viewModel.transform(input: input)
         output.isLoginButtonEnabled.drive(onNext: { [weak self] isEnabled in
             self?.loginButton.isEnabled = isEnabled
+            self?.loginButton.backgroundColor = isEnabled ? .secondary_main : .primary_700
         }).disposed(by: bag)
         output.isLoading.drive(onNext: { isLoading in
             isLoading ? SVProgressHUD.show() : SVProgressHUD.dismiss()
         }).disposed(by: bag)
-        output.error.drive(onNext: { error in
-            print(error)
+        output.error.drive(onNext: { [weak self] error in
+            if let error = error as? APIError {
+                self?.presentAlert(title: "Error", message: error.message)
+            } else {
+                self?.presentAlert(title: "Error", message: error.localizedDescription)
+            }
         }).disposed(by: bag)
         output.isNeedOtp.drive(onNext: { [weak self] _ in
             guard let `self` = self else { return }
@@ -189,6 +198,33 @@ class LoginViewController: UIViewController {
     }
 }
 
+extension LoginViewController {
+    private func authorizeWithWeb() {
+        guard let url = viewModel.authorizeUrl else {
+            return
+        }
+        let viewController = WebViewController(url: url, delegate: self)
+        navigationController?.present(viewController, animated: true)
+    }
+
+    private func navigateToGist() {
+        guard let navigationController = self.navigationController else { return }
+        let provider = Application.shared.defaultUseCaseProvider()
+        let navigator = GistNavigator(provider: provider, navigationController: navigationController)
+        navigator.toRoot()
+    }
+}
+
+extension LoginViewController: WebViewControllerDelegate {
+    func callback(in: WebViewController, code: String) {
+        viewModel.login(code: code, onSuccess: { [weak self] in
+//            self?.navigateToGist()
+        }, onError: { [weak self] error in
+            self?.presentAlert(title: "Error", message: error)
+        })
+    }
+}
+
 extension LoginViewController: FilledTextFieldDelegate {
     func filledTextFieldDidBeginFocusing(_ textField: FilledTextField) {
         activeTextField = textField
@@ -205,6 +241,7 @@ extension LoginViewController {
                 selector: #selector(keyboardWillShow(notification:)),
                 name: UIResponder.keyboardWillShowNotification,
                 object: nil)
+        notificationCenter.addObserver(self, selector: #selector(keyboardWillShow(notification:)), name: UIResponder.keyboardDidShowNotification, object: nil)
         notificationCenter.addObserver(
                 self,
                 selector: #selector(keyboardWillShow(notification:)),
@@ -215,6 +252,11 @@ extension LoginViewController {
                 selector: #selector(keyboardWillHide(notification:)),
                 name: UIResponder.keyboardWillHideNotification,
                 object: nil)
+        notificationCenter.addObserver(
+            self,
+            selector: #selector(keyboardWillHide(notification:)),
+            name: UIResponder.keyboardDidHideNotification,
+            object: nil)
     }
 
     @objc private func keyboardWillShow(notification: Notification) {

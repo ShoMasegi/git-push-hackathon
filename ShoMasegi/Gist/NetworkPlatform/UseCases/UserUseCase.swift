@@ -11,7 +11,7 @@ public final class UserUseCase: Domain.UserUseCase {
         self.network = network
     }
 
-    public func user() -> Observable<Domain.Response<AuthUser>> {
+    public func user() -> Observable<Domain.Response<Domain.AuthUser>> {
         return network.request(.user())
                 .map(to: Domain.AuthUser.self)
     }

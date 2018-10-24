@@ -14,7 +14,12 @@ final class GistNavigator {
     }
 
     func toRoot() {
-        let viewController = UIViewController()
+        let viewModel = GistViewModel(useCase: provider.makeGistUseCase(), navigator: self)
+        let viewController = GistViewController(viewModel: viewModel)
         navigationController?.pushViewController(viewController, animated: false)
+    }
+
+    func toDetail(gist: Gist) {
+
     }
 }

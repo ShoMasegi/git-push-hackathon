@@ -16,6 +16,10 @@ public final class UseCaseProvider: Domain.NetworkUseCaseProvider {
         return LoginUseCase(network: networkProvider)
     }
 
+    public func makeGistUseCase() -> Domain.GistUseCase {
+        return GistUseCase(network: networkProvider)
+    }
+
     public func makeUserUserCase() -> Domain.UserUseCase {
         return UserUseCase(network: networkProvider)
     }
